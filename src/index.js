@@ -4,6 +4,7 @@ import {Router, hashHistory} from 'react-router';
 import {Provider} from 'react-redux';
 import store from './store/index';
 import routes from './routes';
+import './styles/country.css';
 
 
 ReactDOM.render(
