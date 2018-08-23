@@ -1,17 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Router, hashHistory} from 'react-router';
 import {Provider} from 'react-redux';
 import store from './store/index';
-import DevTools from './tools/DevTools';
-import {getCountries} from './actions/actions';
+import routes from './routes';
+
 
 ReactDOM.render(
 <Provider store={store}>
-<div>
-    <DevTools />
-    <h1>STH</h1>
-</div>
+    <Router history={hashHistory} routes={routes} />
 </Provider>,
  document.getElementById('root')
 );
-store.dispatch(getCountries());
